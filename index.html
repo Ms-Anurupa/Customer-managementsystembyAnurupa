@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management System</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1 class="login" >Login Page</h1>
+    <form id="loginForm" class="login-id">
+        <label for="login_id">Login-id:</label>
+        <input type="login id" id="login_id" name="login_id" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button class="boxes" type="submit">Submit</button>
+    </form>
+    <div class="list" >
+    <h1>Customer List</h1>
+    <button class="back"  onclick="createCustomer()">Create Customer</button>
+    <button class="back" class="box" onclick="logout()">Logout</button> <br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+              <th scope="col">City</th>
+              <th scope="col">State</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+            </tr>
+        </thead>
+        <tbody id="customerListBody">
+            <!-- Customer data will be displayed here -->
+            
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Sakshi</td>
+                  <td>Sharma</td>
+                  <td>Hno1</td>
+                  <td>Delhi</td>
+                  <td>Delhi</td>
+                  <td>sam@gmail.com</td>
+                  <td>10258</td>
+                  
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Nikhil</td>
+                    <td>Sharma</td>
+                    <td>Hno1</td>
+                    <td>Delhi</td>
+                    <td>Delhi</td>
+                    <td>sam@gmail.com</td>
+                    <td>10232</td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Roneet</td>
+                    <td>Sharma</td>
+                    <td>Hno1</td>
+                    <td>Delhi</td>
+                    <td>Delhi</td>
+                    <td>sam@gmail.com</td>
+                    <td>10267</td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                  <td>Jane</td>
+                  <td>Jane</td>
+                  <td>Hno1</td>
+                  <td>Delhi</td>
+                  <td>Delhi</td>
+                  <td>sam@gmail.com</td>
+                  <td>10244</td>
+                  
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                  <td>Tom</td>
+                  <td>Tom</td>
+                  <td>Hno1</td>
+                  <td>Delhi</td>
+                  <td>Delhi</td>
+                  <td>sam@gmail.com</td>
+                  <td> </td>
+                </tr>
+              
+        </tbody>
+    </table>
+
+</div>
+<div class="create" >
+    <h1>Create Customer</h1>
+    <button class="back" onclick="viewCustomerList()">Back to Customer List</button> <br><br>
+    
+    <form id="createCustomerForm">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+
+        <label for="email">Street:</label>
+        <input type="email" id="Street" name="Street" required><br><br>
+
+   
+
+        <label for="email">Address:</label>
+        <input type="email" id="Address" name="Address" required><br><br>
+
+        <label for="email">City:</label>
+        <input type="email" id="City" name="City" required><br><br>
+
+        <label for="email">State:</label>
+        <input type="email" id="State" name="State" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="email">Phone:</label>
+        <input type="email" id="Phone" name="Phone" required><br><br>
+
+   
+        
+
+        <button type="submit" class="update">Create</button>
+    </form>
+
+</div>
+<div class="end">
+    <h1>Update/Delete Customer</h1>
+    <button class="back" onclick="viewCustomerList()">Back to Customer List</button> <br><br>
+    <form id="updateDeleteCustomerForm">
+        <label for="uuid">Customer UUID:</label>
+        <input type="text" id="uuid" name="uuid" required><br><br>
+
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <button type="button" class="update" onclick="updateCustomer()">Update</button>
+        <button type="button" class="delete" onclick="deleteCustomer()">Delete</button>
+    </form>
+</div>
+
+</body>
+</html>
